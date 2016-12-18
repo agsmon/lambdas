@@ -120,8 +120,9 @@ public class Lesson2 {
     private void exercise6() throws IOException {
         try (BufferedReader reader = Files.newBufferedReader(
             Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
+            Pattern pattern = Pattern.compile(WORD_REGEXP);
             List<String> list = reader.lines()
-                .flatMap(s -> Pattern.compile(WORD_REGEXP).splitAsStream(s))
+                .flatMap(pattern::splitAsStream)
                 .map(String::toLowerCase)
                 .distinct()
                 .sorted()
