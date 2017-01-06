@@ -1,4 +1,4 @@
-/**
+package lesson1; /**
  * Copyright © 2016, Oracle and/or its affiliates. All rights reserved.
  * <p>
  * JDK 8 MOOC Lesson 1 homework
